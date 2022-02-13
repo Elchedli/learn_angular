@@ -1,0 +1,42 @@
+<h1>Project: {{ title }}</h1>
+<form>
+    <div class="form-group">
+        <label>Search Price:</label>
+        <input type="number" [(ngModel)]="priceMax" class="form-control">
+    </div>
+</form>
+
+<div class="row">
+    <app-product *ngFor="let p of listProduct" [product]="p">
+    </app-product> 
+</div>
+
+<!-- <p>{{title}}</p>
+<form>
+    <input name="priceMax" type="number" [(ngModel)]="priceMax">
+</form>
+{{priceMax}} -->
+<!-- <table border="2">
+    <tr>
+        <th>title</th>
+        <th>price</th>
+        <th>quantity</th>
+        <th>like</th>
+    </tr>
+    <tbody *ngFor="let product of listProduct; let i=index">
+        <tr *ngIf="product.price<priceMax">
+        <tr [hidden]="product.price<priceMax">
+            <td>{{product.id}}</td>
+            <td>{{product.title}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.like}}<button (click)="incrementLike(i)">Like</button></td>
+            <td>
+                <button [disabled]="product.quantity==0">
+                    buy
+                </button>
+            </td>
+        </tr>
+    </tbody>
+
+</table> -->
